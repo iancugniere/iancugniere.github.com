@@ -1,11 +1,40 @@
+/********** FONTS ***********/
+
+/* latin */
+
+@font-face {
+  font-family: 'Playfair Display', 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display'), url(https://fonts.googleapis.com/css?family=Playfair+Display) format('woff2');
+  src: local('Raleway'), url(https://fonts.google.com/specimen/Raleway) format('woff2');
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/J0GYVYTizO1mjpT3aOcSbQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+
+
+/*********** BODY *************/
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../images/background.jpeg) no-repeat center center relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+
+}
+
 /********** HEADER ************/
 header h1 {
-        font-family: 'Playfair Display';
-        color: black;
-        text-align: center;
-        position: relative;
-        width: 100%;
-        line-height: 108px;
+    font-family: 'Playfair Display';
+    color: black;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    line-height: 108px;
 }
 
 /* Style The Dropdown Button */
@@ -29,7 +58,7 @@ header h1 {
 .dropdown-content {
     display: none;
     animation-timing-function:ease;
-    position: relative;
+    position: absolute;
     min-width: 100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -56,63 +85,92 @@ header h1 {
     background-color: white;
 }
 
-/********** FOOTER ************/
-footer h3 {
-	font-family: 'Playfair Display', 'Arvo';
-        color: black;
-        text-align: right;
-        position: relative;
-	padding-right: 10px;	
+
+
+
+    
+
+/********** MAIN ************/
+main {
+
 }
 
-/*********** BODY *************/
-body {
-        margin: 0;
-        padding: 0;
-        background: url(../images/background.jpeg) no-repeat center center relative;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+.image-container {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 100%;
+
+    position: relative;
 }
 
-	.image:hover {
-	background: transparent linear-gradient;
-    	opacity:0.7;
-	/*-webkit-filter: brightness(70%);*/
-	-webkit-transition: all 1s ease;
-	-moz-transition: all 1s ease;
-	-o-transition: all 1s ease;
-	-ms-transition: all 1s ease;
-	transition: all 1s ease;
-    overflow: hidden;
+.image {
+    max-width: 100%;
+    line-height: 0;
+
+    display: block;
+
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
-/*div img*/.image {
-        min-width: 100%;
-        min-height: 100%;
-        position: relative;
-        margin: None;
-        padding: None;
-        border: None;
+.image-container:hover .image {
+    opacity:0.7;
+    
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
-	.image:hover > overlay {
-	background-color:black;
-    	opacity:0.5;
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: rgba(0,0,0, 0);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
-div p {
-	font-family: 'Playfair Display', 'Arvo';
-	width: 100%;
-	margin: 0;
-	text-align: center;
-	color: white;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	font-size: /*3rem*/55px;
-	transform: translate(-50%, -50%);
+
+.image-container:hover .overlay {
+    background: rgba(0,0,0, 0.4);
+
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.overlay p {
+    
+    line-height: 1.4em;
+    font-family: 'Playfair Display', 'Arvo';
+    color: white;
+    text-align: center;
+    font-size: /*3rem*/55px;
+
 }
 
 /*div p
@@ -129,16 +187,13 @@ div p {
 }*/
 
 
-/********** FONTS ***********/
 
-/* latin */
-/*
-@font-face {
-  font-family: 'Playfair Display', 'Arvo';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Playfair Display'), url(https://fonts.googleapis.com/css?family=Playfair+Display) format('woff2');
-  src: local('Raleway'), url(https://fonts.google.com/specimen/Raleway) format('woff2');
-  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/J0GYVYTizO1mjpT3aOcSbQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;*/
+
+/********** FOOTER ************/
+footer h3 {
+    font-family: 'Playfair Display', 'Arvo';
+        color: black;
+        text-align: right;
+        position: relative;
+    padding-right: 10px;    
 }
