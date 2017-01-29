@@ -1,0 +1,144 @@
+/********** HEADER ************/
+header h1 {
+        font-family: 'Playfair Display';
+        color: black;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        line-height: 108px;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    font-family: 'Raleway', 'Arvo';
+    background-color: white;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    animation-timing-function:ease;
+    position: relative;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Playfair Display', 'Arvo';
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: white;
+}
+
+/********** FOOTER ************/
+footer h3 {
+	font-family: 'Playfair Display', 'Arvo';
+        color: black;
+        text-align: right;
+        position: relative;
+	padding-right: 10px;	
+}
+
+/*********** BODY *************/
+body {
+        margin: 0;
+        padding: 0;
+        background: url(../images/background.jpeg) no-repeat center center relative;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+	.image:hover {
+	background: transparent linear-gradient;
+    	opacity:0.7;
+	/*-webkit-filter: brightness(70%);*/
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+    overflow: hidden;
+}
+
+/*div img*/.image {
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        margin: None;
+        padding: None;
+        border: None;
+}
+
+	.image:hover > overlay {
+	background-color:black;
+    	opacity:0.5;
+}
+
+div p {
+	font-family: 'Playfair Display', 'Arvo';
+	width: 100%;
+	margin: 0;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: /*3rem*/55px;
+	transform: translate(-50%, -50%);
+}
+
+/*div p
+{
+        font-family: 'Playfair Display', 'Arvo';
+        color: white;
+        text-align: center;
+        position: fixed;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 50px;
+        margin-left: 50px;
+        z-index: 99;
+}*/
+
+
+/********** FONTS ***********/
+
+/* latin */
+/*
+@font-face {
+  font-family: 'Playfair Display', 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display'), url(https://fonts.googleapis.com/css?family=Playfair+Display) format('woff2');
+  src: local('Raleway'), url(https://fonts.google.com/specimen/Raleway) format('woff2');
+  src: local('Arvo'), url(https://fonts.gstatic.com/s/arvo/v9/J0GYVYTizO1mjpT3aOcSbQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;*/
+}
