@@ -1,27 +1,18 @@
-var text = $('#name').text();
+var container;
+var text = 'Ian Cugniere';
+var index = 0;
+document.addEventListener('DOMContentLoaded', function() {
 
-var length = text.length;
-var timeOut;
-var character = 0;
+	container = document.getElementById('name');
+	text = container.innerText;
+	container.innerHTML = '';
+	type();
+}, false);
 
-
-(function typeWriter() { 
-    timeOut = setTimeout(function() {
-        character++;
-        var type = text.substring(0, character);
-        $('#name').text(type);
-        typeWriter();
-        
-        if (character == length) {
-            clearTimeout(timeOut);
-        }           
-    }, 150);
-}());
-
-
-/* QUESTIONS
-
-http://stackoverflow.com/questions/19767069/letter-by-letter-text-appearance-animation-with-css
-http://jsfiddle.net/kA8G8/7/
-
-*/
+function type(){
+	container.innerHTML += text[index];
+	index++;
+	if(index < text.length) {
+    	setTimeout(type, 500);
+    }
+}
